@@ -19,29 +19,29 @@
         <div id="climaResult"></div>
     </div>
 
-
     <script>
         document.getElementById('formClima').addEventListener('submit', function (event) {
             event.preventDefault();
 
-        const city = document.getElementById('cityInput').value;
+            const city = document.getElementById('cityInput').value;
 
-        fetch(`http://localhost:3000/climatempo/${city}`)
-        .then(response => response.json())
-        .then(data => {
+            fetch(`http://localhost:3000/climatempo/${city}`)
+            .then(response => response.json())
+            .then(data => {
 
-            const tempoResult = document.getElementById('climaResult')
+                const tempoResult = document.getElementById('climaResult')
 
-            if(data.Temperatura) {
-                tempoResult.innerHTML = `Temperatura: ${data.Temperatura}°C <br>
-                Umidade: ${data.Umidade}% <br>
-                Velocidade do Vento ${data.VelocidadeDoVento} m/s <br>
-                Descrição do Clima ${data.Clima}`;
-            } else {
-                tempoResult.innerHTML = "Erro ao obter dados meteorológicos";
-            }
-        })
-        .catch(error => console.log("Erro ao obter dados"));
+                if(data.Temperatura) {
+                    tempoResult.innerHTML = `
+                        <div><img class="iconTamanho" src="temperatura.png" alt="Umidade">Temperatura: ${data.Temperatura} <br/> <img class="iconTamanho" src="umidade.png" alt="Umidade"> °C Umidade: ${data.Umidade}% <br>
+                        <img class="iconTamanho" src="vento.png" alt="Velocidade do Vento"> Velocidade do Vento: ${data.VelocidadeDoVento} m/s <br>
+                        <img class="iconTamanho" src="climass.gif" alt="Descrição do Clima"> Descrição do Clima: ${data.Clima}</div>`;
+
+                } else {
+                    tempoResult.innerHTML = "Erro ao obter dados meteorológicos";
+                }
+            })
+            .catch(error => console.log("Erro ao obter dados"));
         })
     </script>
     <script src="teste.js"></script>

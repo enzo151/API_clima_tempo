@@ -29,7 +29,7 @@ const traducaoClima = {
     "clear sky" : "céu claro",
     "moderate rain" : "chuva moderada",
     "light snow" : "Pouca neve",
-    "haze" : "neblina",
+    "haze" : "Neblina",
     "clear" : "Céu limpo",
     "clouds" : "Céu parcialmente nublado",
     "drizzle" : "Chuva fraca",
@@ -42,6 +42,7 @@ const traducaoClima = {
     "fog ": "Neblina densa",
     "sand ": "Areia no ar",
     "ash" : "Cinzas vulcânicas suspensas no ar",
+    "light rain" : "Chuva leve",
     "squall": "Rajadas de vento súbitas e intensas"
 
 }

@@ -1,142 +1,100 @@
-* body { 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 20px;
-    padding: 20px;
-    background-image: url(pexels-johannes-plenio-1632788.jpg);
-    background-size: 100%;
-    font-style: oblique;
-}
+    body {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-image: url(pexels-vladyslav-dushenkovsky-4100130\ \(1\).jpg);
+        background-size: 100%;
+        font-style: oblique;
+    }
 
-h1 {
-    text-align: center;
-    color: #e92f00;
-    font-size: 24px;
-}
+    form {
+        text-align: center;
+        margin: 15px;
+        align-items: center;
+    }
 
-form {
-    text-align: center;
-    margin: 15px;
-    align-items: center;
-}
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #ffffff;
+        font-style: normal;
+    }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 18px;
-    color: #ffffff;
-    font-style: italic;
-}
+    input {
+        padding: 5px;
+        width: 220px;
+        font-size: 16px;
+    }
 
-input {
-    padding: 5px;
-    width: 220px;
-    font-size: 16px;
-}
+    button {
+        margin: 5%;
+        padding: 10px;
+        background-color: #9c2a2a;
+        color: #fff;
+        border-radius: 20px;
+        border: none;
+        cursor: grab;
+        font-size: 14px;
+        font-family: 'Lucida Sans';
+    }
 
-button {
-    margin: 5%;
-    padding: 10px;
-    background-color: #9c2a2a;
-    color: #fff;
-    border-radius: 20px;
-    border: none;
-    cursor: grab;
-    font-size: 14px;
-    font-family: 'Lucida Sans'
-}
+    button:hover {
+        background-color: #f2f2f2;
+    }
 
-button:hover {
-    background-color: #ceed07;
-}
+    .climaResult {
+        max-width: 200px;
+        margin: 45px auto;
+        padding: 20px; 
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 
-.climaResult {
-    max-width: 200px;
-    margin: 45px auto;
-    padding: 20px;
-    border: 1px body { 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin: 10px;
-    padding: 0px;
-}
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        font-style: oblique;
+    }
 
-h1 {
-    text-align: center;
-    color: #12ce0b;
-}
+    #climaResult {
+        max-width: 2659px;
+        margin: 45px auto;
+        padding: 20px;
+        border: 1px solid #000;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        align-items: center;
+        text-align: left;
+    }
 
-form {
-    text-align: center;
-    margin: 0px, 0px, 0px 15px; 
-}
+    #climaResult .climaResult p {
+        width: 40vh;
+        font-size: 18px;
+        color: #333;
+        color: yellow;
+    }
 
-label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #555;
-}
+    #climaResult, .climaResult {
+        display: flex;
+        justify-content: center;
+        width: 60vh;
+        padding: 20px;
+        border-radius: 10px;
+        border: 0px solid rgb(141, 193, 245);
+    }
 
-input {
-    padding: 10px;
-    width: 300px;
-    font-size: 16px;
-}
+    #centerA {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        box-shadow: 100% rgba(0, 0, 0, 0.3);
+    }
 
-button {
-    padding: 12px;
-    background-color: #564cc0;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+    .iconTamanho {
+        width: 7vh;
+        height: 7vh;
+    }
 
-button:hover {
-    background-color: #8f5dcc;
-}
-
-#climaResult {
-    max-width: 250px;
-    margin: 45px auto;
-    padding: 20px;
-    border: 1px solid #000000;
-    background-color: #f1c4f2;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    align-items: center;
-}
-
-#climaResult p {
-    font-size: 18px;
-    color: #333;
-    
-}
-px solid #ffffff;
-    background-color: #b95921;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    align-items: center;
-
-}
-
-.climaResult p {
-    font-size: 18px;
-    color: #333;
-    
-}
-
-#climaResult {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    padding: 20px;
-    border-radius: 10px;
-    border: 0px solid rgb(141, 193, 245);
-}
-
-#centerA {
-    width: 100%;
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    box-shadow: 100% rgba(0, 0, 0, 0.3)
-}
+    .container{
+        width: 80vh;
+        height: 40vh;
+    }
