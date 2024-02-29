@@ -13,10 +13,11 @@
     <form id="formClima">
         <label for="cityInput">Cidade:</label>
         <input type="text" id="cityInput" name="cityInput"> <br>
-        <button type="submit">Consultar</button>
+        <button type="submit" onclick="showInfo()">Consultar</button>
     </form>
-
-    <div id="climaResult"></div>
+    <div id="centerA">
+        <div id="climaResult"></div>
+    </div>
 
 
     <script>
@@ -43,5 +44,6 @@
         .catch(error => console.log("Erro ao obter dados"));
         })
     </script>
+    <script src="teste.js"></script>
 </body>
 </html>
