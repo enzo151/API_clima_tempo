@@ -1,3 +1,4 @@
+    /* fundo */
     body {
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         margin: 20px;
@@ -7,12 +8,14 @@
         font-style: oblique;
     }
 
+    /* posiçoes dos textos */
     form {
         text-align: center;
         margin: 15px;
         align-items: center;
     }
 
+    /* nome do input "cidade:"*/
     label {
         display: block;
         margin-bottom: 10px;
@@ -21,12 +24,14 @@
         font-style: normal;
     }
 
+    /*input para escolher cidade*/
     input {
         padding: 5px;
         width: 220px;
         font-size: 16px;
     }
 
+    /* botao para buscar a informação da cidade(colocada no input)*/
     button {
         margin: 5%;
         padding: 10px;
@@ -39,10 +44,12 @@
         font-family: 'Lucida Sans';
     }
 
+    /* mudar a cor do botao quando passar o cursor em cima */
     button:hover {
         background-color: #f2f2f2;
     }
 
+    /* resultados das pesquisas */
     .climaResult {
         max-width: 200px;
         margin: 45px auto;
@@ -50,12 +57,14 @@
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
+    /* titulo */
     h1 {
         text-align: center;
         color: #ffffff;
         font-style: oblique;
     }
 
+    /* resultado do clima */    
     #climaResult {
         max-width: 2659px;
         margin: 45px auto;
@@ -66,6 +75,7 @@
         text-align: left;
     }
 
+    /* modifica tudo que tiver dentro do <p> */
     #climaResult .climaResult p {
         width: 40vh;
         font-size: 18px;
