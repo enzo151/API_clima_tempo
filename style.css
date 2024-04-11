@@ -1,110 +1,114 @@
-    /* fundo */
-    body {
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        margin: 20px;
-        padding: 20px;
-        background-image: url(pexels-vladyslav-dushenkovsky-4100130\ \(1\).jpg);
-        background-size: 100%;
-        font-style: oblique;
-    }
+/* Fundo da página */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-image: url(pexels-vladyslav-dushenkovsky-4100130\ \(1\).jpg); /* Imagem de fundo */
+    background-size: 100%;
+    font-style: oblique;
+}
 
-    /* posiçoes dos textos */
-    form {
-        text-align: center;
-        margin: 15px;
-        align-items: center;
-    }
+/* Posicionamento dos elementos do formulário */
+form {
+    text-align: center;
+    margin: 15px;
+    align-items: center;
+}
 
-    /* nome do input "cidade:"*/
-    label {
-        display: block;
-        margin-bottom: 10px;
-        font-size: 18px;
-        color: #ffffff;
-        font-style: normal;
-    }
+/* Estilo do rótulo para o input "cidade:" */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff; /* Cor do texto */
+    font-style: normal;
+}
 
-    /*input para escolher cidade*/
-    input {
-        padding: 5px;
-        width: 220px;
-        font-size: 16px;
-    }
+/* Estilo do input para inserir a cidade */
+input {
+    padding: 5px;
+    width: 220px;
+    font-size: 16px;
+}
 
-    /* botao para buscar a informação da cidade(colocada no input)*/
-    button {
-        margin: 5%;
-        padding: 10px;
-        background-color: #9c2a2a;
-        color: #fff;
-        border-radius: 20px;
-        border: none;
-        cursor: grab;
-        font-size: 14px;
-        font-family: 'Lucida Sans';
-    }
+/* Estilo do botão de consulta */
+button {
+    margin: 5%;
+    padding: 10px;
+    background-color: #9c2a2a; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    border-radius: 20px;
+    border: none;
+    cursor: grab;
+    font-size: 14px;
+    font-family: 'Lucida Sans';
+}
 
-    /* mudar a cor do botao quando passar o cursor em cima */
-    button:hover {
-        background-color: #f2f2f2;
-    }
+/* Altera a cor do botão quando o cursor passa sobre ele */
+button:hover {
+    background-color: #f2f2f2;
+}
 
-    /* resultados das pesquisas */
-    .climaResult {
-        max-width: 200px;
-        margin: 45px auto;
-        padding: 20px; 
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
+/* Estilo do contêiner para exibir os resultados */
+.climaResult {
+    max-width: 200px;
+    margin: 45px auto;
+    padding: 20px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-    /* titulo */
-    h1 {
-        text-align: center;
-        color: #ffffff;
-        font-style: oblique;
-    }
+/* Estilo do título principal */
+h1 {
+    text-align: center;
+    color: #ffffff; /* Cor do texto */
+    font-style: oblique;
+}
 
-    /* resultado do clima */    
-    #climaResult {
-        max-width: 2659px;
-        margin: 45px auto;
-        padding: 20px;
-        border: 1px solid #000;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        align-items: center;
-        text-align: left;
-    }
+/* Estilo do contêiner para exibir os resultados do clima */
+#climaResult {
+    max-width: 2659px;
+    margin: 45px auto;
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+    text-align: left;
+}
 
-    /* modifica tudo que tiver dentro do <p> */
-    #climaResult .climaResult p {
-        width: 40vh;
-        font-size: 18px;
-        color: #333;
-        color: yellow;
-    }
+/* Modifica o estilo dos parágrafos dentro do contêiner de resultados */
+#climaResult .climaResult p {
+    width: 40vh;
+    font-size: 18px;
+    color: #333;
+    color: yellow; /* Cor do texto */
+}
 
-    #climaResult, .climaResult {
-        display: flex;
-        justify-content: center;
-        width: 60vh;
-        padding: 20px;
-        border-radius: 10px;
-        border: 0px solid rgb(141, 193, 245);
-    }
+/* Estilo dos contêineres de resultados */
+#climaResult, .climaResult {
+    display: flex;
+    justify-content: center;
+    width: 60vh;
+    padding: 20px;
+    border-radius: 10px;
+    border: 0px solid rgb(141, 193, 245);
+}
 
-    #centerA {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        box-shadow: 100% rgba(0, 0, 0, 0.3);
-    }
+/* Estilo do contêiner principal */
+#centerA {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 100% rgba(0, 0, 0, 0.3);
+}
 
-    .iconTamanho {
-        width: 7vh;
-        height: 7vh;
-    }
+/* Estilo dos ícones */
+.iconTamanho {
+    width: 7vh;
+    height: 7vh;
+}
 
-    .container{
-        width: 80vh;
-        height: 40vh;
-    }
+/* Estilo do contêiner principal */
+.container{
+    width: 80vh;
+    height: 40vh;
+}

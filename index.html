@@ -1,4 +1,6 @@
+<!-- Incluindo um arquivo de estilo CSS -->
 <link rel="stylesheet" href="style.css">
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +12,33 @@
     
     <h1>Consulta do Clima Tempo</h1>
     
+    <!-- Formulário para inserir o nome da cidade -->
     <form id="formClima">
         <label for="cityInput">Cidade:</label>
         <input type="text" id="cityInput" name="cityInput"> <br>
+        <!-- Botão para enviar a consulta -->
         <button type="submit" onclick="showInfo()">Consultar</button>
     </form>
+
+    <!-- Div para exibir os resultados do clima -->
     <div id="centerA">
         <div id="climaResult"></div>
     </div>
 
+    <!-- Script para realizar a consulta ao servidor -->
     <script>
         document.getElementById('formClima').addEventListener('submit', function (event) {
             event.preventDefault();
 
+            // Obtendo o nome da cidade inserido pelo usuário
             const city = document.getElementById('cityInput').value;
 
+            // Realizando uma solicitação de busca de clima para o servidor
             fetch(`http://localhost:3000/climatempo/${city}`)
             .then(response => response.json())
             .then(data => {
 
+                // Exibindo os resultados na página HTML
                 const tempoResult = document.getElementById('climaResult')
 
                 if(data.Temperatura) {
@@ -44,6 +54,7 @@
             .catch(error => console.log("Erro ao obter dados"));
         })
     </script>
+    <!-- Incluindo um arquivo de script -->
     <script src="teste.js"></script>
 </body>
 </html>

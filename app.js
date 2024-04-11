@@ -1,70 +1,62 @@
 const express = require('express');
-//é um Framework para o desenvolvimento de aplicações JavaScript com o Node. js
+// Importando o framework Express, que facilita o desenvolvimento de aplicativos web com Node.js
 
 const axios = require('axios');
-// recebe informação da api
+// Importando o Axios, uma biblioteca para fazer requisições HTTP
 
 const path = require('path');
-//mapeamento de caminhos
+// Importando o módulo 'path', que fornece utilitários para trabalhar com caminhos de arquivos e diretórios
 
 const cors = require('cors');
-//informar aos navegadores se determinado recurso pode ser ou não acessado
+// Importando o módulo 'cors', que é utilizado para habilitar o CORS (Cross-Origin Resource Sharing) em express.js
 
 const config = require('./config.json');
-//chamar o arquivo
+// Importando o arquivo de configuração que contém a chave da API (não é recomendado versionar a chave no GitHub)
 const apikey = config.apikey;
-//não subir a chave gitHub
+// Extraindo a chave da API do arquivo de configuração
 
 const app = express();
+// Criando uma instância do aplicativo Express
 app.listen(3000);
+// Configurando o aplicativo para escutar na porta 3000
 app.use(cors());
+// Habilitando o CORS no aplicativo
 app.use(express.json());
+// Configurando o aplicativo para usar o middleware que permite o uso de JSON nos corpos das requisições
 app.use(express.static(path.join(__dirname, 'public')));
+// Configurando o aplicativo para servir arquivos estáticos da pasta 'public'
 
 const traducaoClima = {
-    "few clouds ": "Poucas nuvens",
-    "scattered clouds":"Nuvens dispersas",  
-    "overcast clouds" : "Nublado",
-    "broken clouds" : "Sem nuvens",
-    "clear sky" : "céu claro",
-    "moderate rain" : "chuva moderada",
-    "light snow" : "Pouca neve",
-    "haze" : "Neblina",
-    "clear" : "Céu limpo",
-    "clouds" : "Céu parcialmente nublado",
-    "drizzle" : "Chuva fraca",
-    "rain" : "Chuva moderada a forte",
-    "thunderstorm" : "Tempestade com trovões",
-    "snow" : "Neve",
-    "mist": "Névoa",
-    "smoke" : "Fumaça no ar",
-    "dust ": "Poeira suspensa no ar",
-    "fog ": "Neblina densa",
-    "sand ": "Areia no ar",
-    "ash" : "Cinzas vulcânicas suspensas no ar",
-    "light rain" : "Chuva leve",
-    "squall": "Rajadas de vento súbitas e intensas"
-
+    // Definindo um objeto de tradução para os diferentes tipos de clima
 }
 
-app.get('/climatempo/:cidade', async (req,res) => {
+app.get('/climatempo/:cidade', async (req, res) => {
+    // Definindo uma rota para lidar com requisições de consulta de clima
     const city = req.params.cidade;
-    try{
-        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
-        if(response.status === 200){
-            const clima = traducaoClima[response.data.weather[0].description] || response.data.weather[0].description;
-            const weatherData ={
-                Temperatura: response.data.main.temp,
-                Umidade: response.data.main.humidity,
-                VelocidadeDoVento: response.data.wind.speed,
-                Clima: clima
-            }
-            res.send(weatherData);
-        }else{
-            res.status(response.status).send({erro: 'Erro ao obter dados materológicos'})
-        }
-}catch(error){
-res.status(500).send({erro:'Erro ao obter dados meteorológicos', error});
-}
+    // Obtendo o nome da cidade da URL
 
+    try {
+        // Tentando fazer uma requisição para a API OpenWeather
+        const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}&units=metric`);
+        // Fazendo uma requisição GET para a API OpenWeather
+
+        if (response.status === 200) {
+            // Se a requisição for bem-sucedida (status 200)
+            const clima = traducaoClima[response.data.weather[0].description] || response.data.weather[0].description;
+            // Traduzindo a descrição do clima para o idioma desejado, se houver uma tradução disponível
+
+            const weatherData = {
+                // Criando um objeto com os dados meteorológicos a serem enviados como resposta
+            }
+
+            res.send(weatherData);
+            // Enviando os dados meteorológicos como resposta da requisição
+        } else {
+            res.status(response.status).send({ erro: 'Erro ao obter dados meteorológicos' });
+            // Se a requisição não for bem-sucedida, envia um erro com o status correspondente
+        }
+    } catch (error) {
+        res.status(500).send({ erro: 'Erro ao obter dados meteorológicos', error });
+        // Se ocorrer um erro durante a requisição, envia um erro interno do servidor (status 500) com informações adicionais
+    }
 });
